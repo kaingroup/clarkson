@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f9a51a;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-width: 0px;
+      }
+
+      .cls-4 {
+        isolation: isolate;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient);
+        mix-blend-mode: multiply;
+        opacity: .55;
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="281.14" y1="-292.16" x2="281.14" y2="-416.4" gradientTransform="translate(87.94 488.17) rotate(-45)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#ab4d4d"/>
+    </linearGradient>
+  </defs>
+  <g class="cls-4">
+    <g id="Layer_1" data-name="Layer 1">
+      <g>
+        <path class="cls-2" d="M77.22,32.84c12.61,12.61,12.32,33.37-.67,46.35-12.99,12.99-33.74,13.28-46.35.67-4.16-4.16-5.82-5.82-9.98-9.98-12.61-12.61-12.32-33.37.67-46.35,12.99-12.99,33.74-13.28,46.35-.67,4.16,4.16,5.82,5.82,9.98,9.98Z"/>
+        <ellipse class="cls-1" cx="43.44" cy="44.72" rx="33.68" ry="32.72"/>
+        <g>
+          <path class="cls-3" d="M42.76,56.49c-9.28,0-14.44-10.11-14.66-10.54-.17-.35-.17-.76,0-1.1.22-.43,5.38-10.54,14.66-10.54s14.44,10.11,14.66,10.54c.17.35.17.76,0,1.1-.22.43-5.38,10.54-14.66,10.54ZM30.61,45.4c1.15,1.98,5.52,8.63,12.15,8.63s11-6.64,12.15-8.63c-1.15-1.98-5.52-8.63-12.15-8.63s-11,6.64-12.15,8.63Z"/>
+          <path class="cls-3" d="M42.76,50.33c-2.72,0-4.93-2.21-4.93-4.93s2.21-4.93,4.93-4.93,4.93,2.21,4.93,4.93-2.21,4.93-4.93,4.93ZM42.76,42.93c-1.36,0-2.46,1.11-2.46,2.46s1.11,2.46,2.46,2.46,2.46-1.11,2.46-2.46-1.11-2.46-2.46-2.46Z"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

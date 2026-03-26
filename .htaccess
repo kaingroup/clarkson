@@ -1,0 +1,50 @@
+#################################################################################################
+# ProcessWire .htaccess for Apache 2.4+
+#################################################################################################
+
+# Don't show directory indexes
+Options -Indexes
+
+# Follow symbolic links
+Options +FollowSymLinks
+
+# Disallow direct access to PHP files in some directories
+<FilesMatch "\.(inc|tpl|info|module)$">
+    Require all denied
+</FilesMatch>
+
+# Turn on the rewrite engine
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    AddDefaultCharset UTF-8
+
+    # Uncomment this line if your web root is in a subdirectory
+    # RewriteBase /
+
+    # Redirect requests to ProcessWire
+    # If the requested URL is a file or directory, don't rewrite
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-l
+
+    # Otherwise, rewrite to index.php
+    RewriteRule ^(.*)$ index.php?it=$1 [L,QSA]
+</IfModule>
+
+#################################################################################################
+# Block access to hidden files and directories
+#################################################################################################
+
+<IfModule mod_rewrite.c>
+    RewriteCond %{SCRIPT_FILENAME} -d [OR]
+    RewriteCond %{SCRIPT_FILENAME} -f
+    RewriteRule "(^|/)\." - [F]
+</IfModule>
+
+#################################################################################################
+# Block access to backup and source files
+#################################################################################################
+
+<FilesMatch "(^#.*#|\.(bak|config|dist|fla|inc|ini|log|psd|sh|sql|sw[op])|~)$">
+    Require all denied
+</FilesMatch>

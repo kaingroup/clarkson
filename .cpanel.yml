@@ -1,0 +1,31 @@
+---
+deployment:
+  tasks:
+    # Set your deployment path (update USERNAME to your cPanel username)
+    - export DEPLOYPATH=/home/USERNAME/public_html
+
+    # Deploy ProcessWire core
+    - /bin/cp -R wire $DEPLOYPATH/
+
+    # Deploy site templates
+    - /bin/cp -R site/templates $DEPLOYPATH/site/
+
+    # Deploy site modules
+    - /bin/cp -R site/modules $DEPLOYPATH/site/
+
+    # Deploy site classes
+    - /bin/cp -R site/classes $DEPLOYPATH/site/
+
+    # Deploy hook files
+    - /bin/cp site/init.php $DEPLOYPATH/site/
+    - /bin/cp site/ready.php $DEPLOYPATH/site/
+    - /bin/cp site/finished.php $DEPLOYPATH/site/
+
+    # Deploy root files
+    - /bin/cp index.php $DEPLOYPATH/
+    - /bin/cp .htaccess $DEPLOYPATH/
+
+    # Deploy GeoIP database if present
+    - /bin/cp -R site/assets/geoip $DEPLOYPATH/site/assets/ 2>/dev/null || true
+
+    # Note: site/config.php is NOT deployed to preserve production DB settings

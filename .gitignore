@@ -1,0 +1,33 @@
+# ProcessWire site-specific exclusions
+site/config.php
+site/config-dev.php
+
+# Assets that should stay on production
+site/assets/cache/
+site/assets/sessions/
+site/assets/logs/
+site/assets/files/
+site/assets/backups/
+
+# But keep the GeoIP database tracked
+!site/assets/geoip/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Composer (if you prefer to run composer on server)
+# vendor/
+
+# Temporary files
+*.log
+*.tmp
