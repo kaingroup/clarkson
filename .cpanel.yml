@@ -27,8 +27,8 @@ deployment:
     - /bin/cp composer.json $DEPLOYPATH/
     - /bin/cp composer.lock $DEPLOYPATH/
 
-    # Deploy vendor dependencies (GeoIP2, etc.)
-    - /bin/cp -R vendor $DEPLOYPATH/
+    # Install dependencies on server (much faster than copying vendor)
+    - cd $DEPLOYPATH && /usr/local/bin/composer install --no-dev --optimize-autoloader
 
     # Deploy GeoIP database if present
     - /bin/cp -R site/assets/geoip $DEPLOYPATH/site/assets/ 2>/dev/null || true
