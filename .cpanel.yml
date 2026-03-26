@@ -24,6 +24,11 @@ deployment:
     # Deploy root files
     - /bin/cp index.php $DEPLOYPATH/
     - /bin/cp .htaccess $DEPLOYPATH/
+    - /bin/cp composer.json $DEPLOYPATH/
+    - /bin/cp composer.lock $DEPLOYPATH/
+
+    # Deploy vendor dependencies (GeoIP2, etc.)
+    - /bin/cp -R vendor $DEPLOYPATH/
 
     # Deploy GeoIP database if present
     - /bin/cp -R site/assets/geoip $DEPLOYPATH/site/assets/ 2>/dev/null || true
