@@ -2,7 +2,7 @@
 deployment:
   tasks:
     # Set your deployment path (update USERNAME to your cPanel username)
-    - export DEPLOYPATH=/hom2/eadb/public_html
+    - export DEPLOYPATH=/home2/eadb/public_html
 
     # Deploy ProcessWire core
     - /bin/cp -R wire $DEPLOYPATH/
